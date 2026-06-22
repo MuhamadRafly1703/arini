@@ -1,0 +1,421 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+
+body{
+
+  font-family:Georgia, serif;
+
+
+  background-image:url("arini.jpg");
+
+
+  background-size:cover;
+
+  background-position:center;
+
+  background-repeat:no-repeat;
+
+  background-attachment:fixed;
+
+
+  color:white;
+
+
+  min-height:100vh;
+
+
+  display:flex;
+
+
+  justify-content:center;
+
+
+  align-items:center;
+
+
+  flex-direction:column;
+
+
+  padding:20px;
+
+
+  overflow:hidden;
+
+
+  position:relative;
+
+}
+
+
+
+/* efek gelap foto */
+
+body::before{
+
+  content:"";
+
+  position:absolute;
+
+  inset:0;
+
+  background:rgba(0,0,0,0.35);
+
+  z-index:0;
+
+}
+
+
+
+/* isi tetap di atas background */
+
+.intro,
+.btn,
+.letter{
+
+  position:relative;
+
+  z-index:1;
+
+}
+
+
+
+
+.intro{
+
+  text-align:center;
+
+  font-size:1.4rem;
+
+  margin-bottom:30px;
+
+
+  transition:1s;
+
+}
+
+
+
+
+
+.btn{
+
+
+  padding:12px 25px;
+
+
+  border:none;
+
+
+  border-radius:25px;
+
+
+  background:white;
+
+
+  color:black;
+
+
+  font-size:1rem;
+
+
+  cursor:pointer;
+
+
+  transition:.3s;
+
+}
+
+
+
+.btn:hover{
+
+  transform:scale(1.05);
+
+}
+
+
+
+
+
+
+
+/* SURAT TRANSPARAN */
+
+.letter{
+
+
+  display:none;
+
+
+
+  background:rgba(253,246,227,0.72);
+
+
+
+  backdrop-filter:blur(6px);
+
+  -webkit-backdrop-filter:blur(6px);
+
+
+
+
+  color:#333;
+
+
+
+
+  width:90%;
+
+
+  max-width:600px;
+
+
+
+
+  height:70vh;
+
+
+  max-height:600px;
+
+
+
+
+  padding:35px 30px 120px 65px;
+
+
+
+
+  border-radius:12px;
+
+
+
+
+  box-shadow:
+
+  0 0 25px rgba(0,0,0,.45);
+
+
+
+
+  border:1px solid rgba(255,255,255,.35);
+
+
+
+
+  position:relative;
+
+
+
+
+  font-family:"Courier New",monospace;
+
+
+
+
+  font-size:1rem;
+
+
+
+
+  line-height:1.7;
+
+
+
+
+  white-space:pre-wrap;
+
+
+
+
+  overflow-y:auto;
+
+
+  overflow-x:hidden;
+
+
+
+
+  word-wrap:break-word;
+
+
+
+}
+
+
+
+
+
+
+/* lubang kiri kertas */
+
+.letter::before{
+
+
+  content:"";
+
+
+
+  position:absolute;
+
+
+
+  left:0;
+
+
+  top:0;
+
+
+
+
+  width:25px;
+
+
+  height:100%;
+
+
+
+
+
+  background-image:
+
+
+
+  radial-gradient(circle,#1e1e2f 6px,transparent 7px);
+
+
+
+
+
+  background-size:25px 40px;
+
+
+
+  background-repeat:repeat-y;
+
+
+
+}
+
+
+
+
+
+
+
+
+/* tanda tangan */
+
+.signature{
+
+
+
+  position:absolute;
+
+
+
+  bottom:10px;
+
+
+
+  left:50%;
+
+
+
+  transform:translateX(-50%) rotate(-2deg);
+
+
+
+
+
+  width:140px;
+
+
+
+
+  opacity:.9;
+
+
+
+}
+
+
+
+
+
+audio{
+
+display:none;
+
+}
+
+
+
+
+
+
+
+/* tampilan HP */
+
+@media(max-width:600px){
+
+
+
+.intro{
+
+
+font-size:1.1rem;
+
+
+}
+
+
+
+
+.letter{
+
+
+
+width:95%;
+
+
+
+height:65vh;
+
+
+
+padding:
+
+25px 20px 100px 45px;
+
+
+
+
+font-size:.85rem;
+
+
+
+line-height:1.6;
+
+
+
+}
+
+
+
+
+.signature{
+
+
+width:110px;
+
+
+}
+
+
+
+}
